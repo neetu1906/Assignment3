@@ -1,0 +1,8 @@
+<ol>
+  <li ng-repeat="item in items">
+    Name:   {{ item.name }} ||
+    Short_Name:  {{ item.short_name }} ||
+    Description:  {{ item.description }}
+    <button ng-click="remove({index: $index});">Don't want this one!</button>
+  </li>
+</ol>

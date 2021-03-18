@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="NarrowItDownApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Assignment3</title>
+  </head>
+  <body>
+    <h2>Search Of Menu Item with description..</h2>
+    <div id="menu" ng-controller="NarrowItDownController as menu">
+      <h3>List of Menu Items</h3>
+      <input type="text" ng-model="menu.searchItemDesc" placeholder="Search Text">
+      <button ng-click="menu.getData()">Narrow It Down For Me!</button>
+      <h1 ng-show="menu.showMsg">Nothing Found!!!</h1>
+      <found-items-list
+      items="menu.menu_items"
+      remove="menu.RemoveItem(index);">
+      </found-items-list>
+    </div>
+  </body>
+</html>
